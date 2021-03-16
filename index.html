@@ -1,15 +1,184 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
-</head>
-<body>
-    <h1>oi</h1>
-</body>
-<script src="./script.js"></script>
 
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+
+
+<style type="text/css">
+* {
+	margin: 0cm;
+	padding: 0cm;
+}
+
+body {
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-size: 14pt;
+    background: url(/static/img/grid.png ) repeat-x;
+    background-attachment: fixed;
+}
+
+page {
+	background: white;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 0.5cm;
+	box-shadow: 0cm -0.5cm 0.5cm #2c2c2c;
+	height: auto;
+	color: #48484c;
+}
+
+page[size="A4"] {  
+	width: 21cm;
+	height:auto;  /*/(5*29.7) cm; */
+}
+
+svg:hover {
+    cursor: pointer;
+}
+
+@media print {
+
+	.pergunta, .resposta {
+		page-break-before: always;
+		text-align: justify;
+		font-size: 14pt;
+		font-family: "Times New Roman", Times, serif;
+	}
+
+	.ocultar {
+	    display: none;
+	}
+}
+
+img, div {
+
+	margin-top: -1cm;
+}
+
+img {
+
+	width: 7cm;
+}
+
+p, h4 {
+
+	text-align: justify;
+	max-width: 93vw;
+	position: relative;
+	height: 100%;
+	padding: 1.5cm
+}
+
+
+ 
+</style>
+
+</head>
+		<body >
+			<page size="A4"> 
+				 
+                <h1>Avaliação</h1>                   <h1>Avaliação</h1>
+                <h1>Avaliação</h1>
+                <h1>Avaliação</h1>
+                <h1>Avaliação</h1>
+                <h1>Avaliação</h1>
+                <h1>Avaliação</h1>
+                <h1>Avaliação</h1>
+                <h1>Avaliação</h1>
+                <h1>Avaliação</h1>
+                <h1>Avaliação</h1>
+                <h1>Avaliação</h1>
+                <h1>Avaliação</h1>
+                <h1>Avaliação</h1>
+                <h1>Avaliação</h1>
+                <h1>Avaliação</h1>
+
+                <h1>Avaliação</h1>
+
+
+				<!-- <div class="pergunta" id="pergunta">
+ 					<p>
+ 						CARREGANDO  . . .
+ 					</p>
+				</div> -->
+
+
+				<div class="resposta" id="resposta">
+	 	 
+				</div>
+			</page>
+		</body>
 </html>
+ 
+<!-- <script type="text/javascript">
+
+
+function verificar_src_load(id, obj){
+
+	const token = BQ.Storage.Get({key:'token'});
+
+    BQ.Api.Get({
+        route:'upload/',
+        headers: {
+              'Access-Control-Allow-Origin': window.location.href,
+              'Authorization': 'Token ' + token,
+        },
+        id:id,
+
+        success:function(rtn){
+            var obj1 = JSON.parse(rtn)
+
+            document.querySelector(obj).innerHTML = '<br /><br /><img src="'+obj1.upload+'" alt=""><br /> ';
+
+        }
+    });
+}
+
+
+function verificar_src() {
+
+
+	const src = BQ.Storage.Get({key:'src'});
+
+   if (src !== null ) {
+        var obj = [];
+
+        var i = BQ.Storage.Get({key:'src'}).split(",");
+
+        for (var j = 0; j < i.length; j++) {
+            if (!obj.includes(i[j])) {
+                obj.push(i[j]);
+
+                var id = '#upload_'+i[j];
+
+                if (document.querySelector(id)) {
+
+                	if (document.querySelector(id).innerHTML == '') {
+
+	                    verificar_src_load(i[j], id);
+                	}
+                    
+                }        
+            }
+        }
+   }
+
+}
+
+
+document.addEventListener('readystatechange', event => {
+
+if (event.target.readyState === 'complete') {
+    
+    setInterval(function(){
+        verificar_src();
+
+    }, 1000);
+
+}});
+
+</script> -->
