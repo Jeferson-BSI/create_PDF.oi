@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -78,113 +76,21 @@ p, h4 {
 </style>
 
 </head>
-<<<<<<< HEAD
 		<body >
 			<page size="A4"> 
-				 
-                <h1>Avaliação</h1>                   <h1>Avaliação</h1>
-                <h1>Avaliação</h1>
-                <h1>Avaliação</h1>
-                <h1>Avaliação</h1>
-                <h1>Avaliação</h1>
-                <h1>Avaliação</h1>
-                <h1>Avaliação</h1>
-                <h1>Avaliação</h1>
-                <h1>Avaliação</h1>
-                <h1>Avaliação</h1>
-                <h1>Avaliação</h1>
-                <h1>Avaliação</h1>
-                <h1>Avaliação</h1>
-                <h1>Avaliação</h1>
-                <h1>Avaliação</h1>
 
-                <h1>Avaliação</h1>
+					<div class="pergunta" id="pergunta">
+							<p>
+								CARREGANDO  . . .
+							</p>
+					</div>
 
-=======
-<body>
-    <h1>oi</h1>
-</body>
->>>>>>> 12fe2f861950acaa74ae76d2bdf14467e0f846c2
+					<div class="resposta" id="resposta">
 
-				<!-- <div class="pergunta" id="pergunta">
- 					<p>
- 						CARREGANDO  . . .
- 					</p>
-				</div> -->
-
-
-				<div class="resposta" id="resposta">
-	 	 
-				</div>
+					</div>
 			</page>
+            <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		</body>
+        <script src="./script.js"></script>
 </html>
  
-<!-- <script type="text/javascript">
-
-
-function verificar_src_load(id, obj){
-
-	const token = BQ.Storage.Get({key:'token'});
-
-    BQ.Api.Get({
-        route:'upload/',
-        headers: {
-              'Access-Control-Allow-Origin': window.location.href,
-              'Authorization': 'Token ' + token,
-        },
-        id:id,
-
-        success:function(rtn){
-            var obj1 = JSON.parse(rtn)
-
-            document.querySelector(obj).innerHTML = '<br /><br /><img src="'+obj1.upload+'" alt=""><br /> ';
-
-        }
-    });
-}
-
-
-function verificar_src() {
-
-
-	const src = BQ.Storage.Get({key:'src'});
-
-   if (src !== null ) {
-        var obj = [];
-
-        var i = BQ.Storage.Get({key:'src'}).split(",");
-
-        for (var j = 0; j < i.length; j++) {
-            if (!obj.includes(i[j])) {
-                obj.push(i[j]);
-
-                var id = '#upload_'+i[j];
-
-                if (document.querySelector(id)) {
-
-                	if (document.querySelector(id).innerHTML == '') {
-
-	                    verificar_src_load(i[j], id);
-                	}
-                    
-                }        
-            }
-        }
-   }
-
-}
-
-
-document.addEventListener('readystatechange', event => {
-
-if (event.target.readyState === 'complete') {
-    
-    setInterval(function(){
-        verificar_src();
-
-    }, 1000);
-
-}});
-
-</script> -->
