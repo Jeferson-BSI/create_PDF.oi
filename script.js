@@ -23,7 +23,7 @@ var nomeAvaliacao = document.getElementById('nome');
 
 const url1 = 'https://jsonplaceholder.typicode.com/posts'
 const ApiGet = axios.create({
-    baseURL: 'http://localhost:8000/api/v1/questao', //'https://bq.mat.br/api/v1',
+    baseURL: 'http://10.0.2.2:8000/api/v1/questao', //'https://bq.mat.br/api/v1',
     timeout: 200,
     headers: {'Authorization': 'Token ' + token[1]}
 });
